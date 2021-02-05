@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/* 共通 */
+html {
+  font-size: 100%;
+}
+body {
+  color: #333;
+  /* width: 1200px; */
+  width: 100%;
+}
+section {
+  padding: 80px 0;
+  position: relative;
+}
+.wrapper {
+  width: 960px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  z-index: 5;
+}
+h2 {
+  font-size: 36px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+hr {
+  /* border: 1px solid #333; */
+  width: 40px;
+  margin: 25px auto;
+}
+.text {
+  margin-bottom: 40px;
+}
+h3 {
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+/* レスポンシブ版 -----------------------------*/
+@media (max-width: 750px) {
+  .wrapper {
+    width: 95%;
+  }
+}
+/* ヘッダー */
+#header {
+  width: 100%;
+  height: 620px;
+  background: url(img/header.png) center top no-repeat;
+  background-size: cover;
+  background-color: #EDEDED;
+  /* padding-top: 40px; */
+  color: #fff;
+}
+.wrapper-haeder {
+  height: 100%;
+  position: relative;
+}
+#header nav {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 64px;
+}
+#header nav .nav-title {
+  font-size: 36px;
+  font-family: 'Poppins', sans-serif;
+  display: inline;
+  line-height: 1;
+  position: absolute;
+  top: 17px;
+  left: 0;
+}
+#header nav .humburger-menu {
+  position: absolute;
+  top: 17px;
+  right: 0;
+}
+#header nav .menu-btn {
+  width: 32px;
+  /* height: 100%; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-content: center;
+}
+#menu-btn-check {
+  display: none;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 32px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    top: 8px;
+}
+.menu-btn span:after {
+    top: 17px;
+}
+.header-title {
+ /* position: relative; */
+ height: 516px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.header-title .text-1 {
+  font-size: 120px;
+  font-family: 'Poppins', sans-serif;
+}
+.header-title .text-2 {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+/* コンセプト */
+#concept .background-gray{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 240px;
+  background-color: #ededed;
+  z-index: 1;
+}
+#concept .text {
+  margin-bottom: 40px;
+}
+@media (max-width: 750px) {
+  #concept .text br {
+    display: none;
+  }
+  #concept img {
+    width: 100%;
+  }
+}
+/* ワーク */
+.work-group {
+  width: 100%;
+  height: 1609px;
+  display: flex;
+  justify-content: space-between;
+}
+.work-content {
+  width: 420px;
+  text-align: left;
+  padding-bottom: 80px;
+}
+.work-content img {
+  margin-bottom: 16px;
+}
+.work-group-right {
+  align-self: flex-end;
+}
+@media (max-width: 750px) {
+  #work .text br {
+    display: none;
+  }
+  .work-group {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .work-content {
+    width: 85%;
+    text-align: left;
+    padding-bottom: 80px;
+  }
+  .work-content img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .work-content:nth-child(2),
+  .work-content:nth-child(4) {
+    margin-left: auto;
+  }
+}
+/* フローリスト */
+#florlist .background-gray {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 374px;
+  background-color: #ededed;
+  z-index: 1;
+}
+.florlist-box {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+}
+.florlist {
+  width: 300px;
+}
+@media (max-width: 750px) {
+  .florlist-box {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+  .florlist {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .florlist img {
+    width: 100%;
+  }
+}
+/* アクセス */
+.info-box {
+  display: flex;
+  justify-content: space-between;
+}
+.info-box table {
+  border: 1px dashed #707070;
+  padding: 30px;
+  text-align: left;
+  width: 432px;
+  height: 320px;
+  font-size: 16px;
+}
+.info-box table th {
+  padding-right: 17px;
+  font-weight: normal;
+  vertical-align: top;
+}
+.info-box table td {
+  position: relative;
+  padding-left: 17px;
+  vertical-align: top;
+}
+.info-box table td::before {
+ content:"";
+ width: 1px;
+ height: 80%;
+ background-color: #A0A0A0;
+ position: absolute;
+ display: inline-block;
+ left: 0px;
+}
+@media (max-width: 750px) {
+  .info-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 25px;
+  }
+  .info-box table {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+}
+/* コンタクト */
+#contact {
+  background: url(img/contact_us.png) center center no-repeat;
+  background-size: cover;
+  /* position: relative; */
+}
+/* .contact-bg {
+  background: url(img/contact_us.png) center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-size: cover;
+} */
+#contact button {
+  width: 360px;
+  height: 80px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #A0A0A0;
+  font-size: 20px;
+}
+@media (max-width: 750px) {
+  #contact button {
+    width: 70%;
+  }
+}
+/* フッター */
+footer {
+  padding: 12px 0;
+}
+
+/* レスポンシブ版 -----------------------------*/
+@media (max-width: 750px) {
+
+}
